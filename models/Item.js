@@ -1,21 +1,21 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Menu extends Model { }
+class Item extends Model { }
 
-Menu.init({
+Item.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    item_category: {
+    category: {
         type: DataTypes.STRING
     },
-    item_name: {
+    name: {
         type: DataTypes.STRING
     },
-    item_price: {
+    price: {
         type: DataTypes.INTEGER
     }
 
@@ -26,8 +26,8 @@ Menu.init({
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'menu'
+        modelName: 'item'
     }
 );
 
-module.exports = Menu;
+module.exports = Item;

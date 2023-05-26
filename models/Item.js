@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 class Item extends Model { }
 
 Item.init({
+
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -18,7 +19,6 @@ Item.init({
     price: {
         type: DataTypes.INTEGER
     }
-
 },
 
     {

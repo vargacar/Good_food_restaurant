@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Account extends Model { }
 
-Account.init({
+User.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -38,8 +38,8 @@ Account.init({
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'account'
+        modelName: 'user'
     }
 );
 
-module.exports = Account;
+module.exports = User;

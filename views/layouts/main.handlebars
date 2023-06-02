@@ -11,7 +11,12 @@
 <body>
     <nav>
         <a href="/">Home</a>
+        {{#if isLogedIn}}
+        <a href="/account">Account</a>
+        <a href="/" id="logout">Logout</a>
+        {{else}}
         <a href="/login">Login</a>
+        {{/if}}
     </nav>
 
     <main>
@@ -23,6 +28,10 @@
             All rights reserved 2023
         </p>
     </footer>
+
+    {{#if isLogedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>

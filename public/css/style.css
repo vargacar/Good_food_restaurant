@@ -17,8 +17,13 @@ nav{
 nav a{
     text-decoration: none;
     color: white;
+    margin-left: 15px;
+
 }
 
+nav a:hover {
+    color: greenyellow;
+}
 
 .brand{
     font-size: 28px;

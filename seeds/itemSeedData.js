@@ -1,189 +1,232 @@
 
-const { Product } = require('../models');
+const { Item } = require('../models');
 
-const productData = [
+const itemsData = [
   {
-    product_name: 'Italian Omelette',
+    name: 'Italian Omelette',
     price: 14.25,
-    category: Breakfast,
+    category: 'Breakfast',
+    imageurl: 'https://placehold.co/200'
+    
   },
   {
-    product_name: 'Pastrami & Eggs',
+    name: 'Pastrami & Eggs',
     price: 15.35,
-    category: Breakfast,
+    category: 'Breakfast',
+    imageurl: 'https://placehold.co/200'
+   
   },
   {
-    product_name: 'Silver Dollar Pancake',
+    name: 'Silver Dollar Pancake',
     price: 9.85,
-    category: Breakfast,
+    category: 'Breakfast',
+    imageurl: 'https://placehold.co/200'
+    
   },
   {
-    product_name: 'French Toast',
+    name: 'French Toast',
     price: 8.75,
-    category: Breakfast,
+    category: 'Breakfast',
+    imageurl: 'https://placehold.co/200'
+    
   },
   {
-    product_name: 'Bananas Foster Waffle',
+    name: 'Bananas Foster Waffle',
     price: 17.55,
-    category: Breakfast,
+    category: 'Breakfast',
+    imageurl: 'https://placehold.co/200'
+    
   },
   {
-    product_name: 'Potato & Egg Sandwich',
+    name: 'Potato & Egg Sandwich',
     price: 4.95,
-    category: Breakfast,
+    category: 'Breakfast',
+    imageurl: ''
+    
   },
   {
-    product_name: 'Turkey Club',
+    name: 'Turkey Club',
     price: 16.45,
-    category: Lunch,
+    category: 'Lunch',
+    imageurl: ''
+
   },
   {
-    product_name: 'Tuna Melt',
+    name: 'Tuna Melt',
     price: 15.35,
-    category: Lunch,
+    category: 'Lunch',
+    imageurl: ''
   },
   {
-    product_name: 'Chicken Fingers Delight',
+    name: 'Chicken Fingers Delight',
     price: 15.95,
-    category: Lunch,
+    category: 'Lunch',
+    imageurl: ''
   },
   {
-    product_name: 'Cuban Panini',
+    name: 'Cuban Panini',
     price: 16.45,
-    category: Lunch,
+    category: 'Lunch',
+    imageurl: ''
   },
   {
-    product_name: 'B.L.T Sandwich',
+    name: 'B.L.T Sandwich',
     price: 8.75,
-    category: Lunch,
+    category: 'Lunch',
+    imageurl: ''
   },
   {
-    product_name: 'Smoke House Burger',
+    name: 'Smoke House Burger',
     price: 17.55,
-    category: Lunch,
+    category: 'Lunch',
+    imageurl: ''
   },
   {
-    product_name: 'Chicken Francaise',
+    name: 'Chicken Francaise',
     price: 24.15,
-    category: Dinner,
+    category: 'Dinner',
+    imageurl: ''
   },
   {
-    product_name: 'Shrimp Scampi',
+    name: 'Shrimp Scampi',
     price: 32.95,
-    category: Dinner,
+    category: 'Dinner',
+    imageurl: ''
   },
   {
-    product_name: 'Veal Parmigiana',
+    name: 'Veal Parmigiana',
     price: 20.95,
-    category: Dinner,
+    category: 'Dinner',
+    imageurl: ''
   },
   {
-    product_name: 'Baked Meatloaf',
+    name: 'Baked Meatloaf',
     price: 19.75,
-    category: Dinner,
+    category: 'Dinner',
+    imageurl: ''
   },
   {
-    product_name: 'Roast Sirloin of Beef',
+    name: 'Roast Sirloin of Beef',
     price: 20.95,
-    category: Dinner,
+    category: 'Dinner',
+    imageurl: ''
   },
   {
-    product_name: 'Pan Fried Calfs Liver',
+    name: 'Pan Fried Calfs Liver',
     price: 21.95,
-    category: Dinner,
+    category: 'Dinner',
+    imageurl: ''
   },
   {
-    product_name: 'Cheescake',
+    name: 'Cheescake',
     price: 5.70,
-    category: Desserts,
+    category: 'Desserts',
+    imageurl: ''
   },
   {
-    product_name: 'Chocolate Cheescake',
+    name: 'Chocolate Cheescake',
     price: 6.35,
-    category: Desserts,
+    category: 'Desserts',
+    imageurl: ''
   },
   {
-    product_name: 'Apple Pie',
+    name: 'Apple Pie',
     price: 4.95,
-    category: Desserts,
+    category: 'Desserts',
+    imageurl: ''
   },
   {
-    product_name: 'Linzer Tart',
+    name: 'Linzer Tart',
     price: 4.00,
-    category: Desserts,
+    category: 'Desserts',
+    imageurl: ''
   },
   {
-    product_name: 'Cheese Danish',
+    name: 'Cheese Danish',
     price: 3.60,
-    category: Desserts,
+    category: 'Desserts',
+    imageurl: ''
   },
   {
-    product_name: 'Rice Pudding',
+    name: 'Rice Pudding',
     price: 5.20,
-    category: Desserts,
+    category: 'Desserts',
+    imageurl: ''
   },
   {
-    product_name: 'Hot Tea',
+    name: 'Hot Tea',
     price: 2.90,
-    category: Drinks,
+    category: 'Drinks',
+    imageurl: ''
   },
   {
-    product_name: 'Orange Juice',
+    name: 'Orange Juice',
     price: 5.20,
-    category: Drinks,
+    category: 'Drinks',
+    imageurl: ''
   },
   {
-    product_name: 'Milk Shakes',
+    name: 'Milk Shakes',
     price: 7.15,
-    category: Drinks,
+    category: 'Drinks',
+    imageurl: ''
   },
   {
-    product_name: 'Lemonade',
+    name: 'Lemonade',
     price: 3.40,
-    category: Drinks,
+    category: 'Drinks',
+    imageurl: ''
   },
   {
-    product_name: 'Whole Milk',
+    name: 'Whole Milk',
     price: 4.30,
-    category: Drinks,
+    category: 'Drinks',
+    imageurl: ''
   },
   {
-    product_name: 'Herbal Teas',
+    name: 'Herbal Teas',
     price: 2.99,
-    category: Drinks,
+    category: 'Drinks',
+    imageurl: ''
   },
   {
-    product_name: 'Bacon',
+    name: 'Bacon',
     price: 6.50,
-    category: Sides,
+    category: 'Sides',
+    imageurl: ''
   },
   {
-    product_name: 'Turkey Sausage',
+    name: 'Turkey Sausage',
     price: 6.50,
-    category: Sides,
+    category: 'Sides',
+    imageurl: ''
   },
   {
-    product_name: 'Fresh Fruit Salad',
+    name: 'Fresh Fruit Salad',
     price: 5.20,
-    category: Sides,
+    category: 'Sides',
+    imageurl: ''
   },
   {
-    product_name: 'Home Fries',
+    name: 'Home Fries',
     price: 4.55,
-    category: Sides,
+    category: 'Sides',
+    imageurl: ''
   },
   {
-    product_name: 'Toast',
+    name: 'Toast',
     price: 2.15,
-    category: Sides,
+    category: 'Sides',
+    imageurl: ''
   },
   {
-    product_name: 'Croissant',
+    name: 'Croissant',
     price: 3.25,
-    category: Sides,
+    category: 'Sides',
+    imageurl: ''
   },
 ];
 
-const seedProducts = () => Product.bulkCreate(productData);
-
-module.exports = seedProducts;
+const seedItems = () => Item.bulkCreate(itemsData);
+seedItems()
+module.exports = seedItems;

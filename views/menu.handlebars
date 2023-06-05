@@ -1,0 +1,13 @@
+<h1>Menu Page</h1>
+<div class="info">
+    {{#if message}}
+    <p>{{message}}</p>
+    {{/if}}
+</div>
+
+<div class="items_container">
+    {{#each items}}
+    <img src="{{this.imageurl}}" alt="">
+    <p>{{this.name}}</p>
+    {{/each}}
+</div>

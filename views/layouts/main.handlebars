@@ -5,13 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Good Food</title>
 </head>
 
 <body>
     <nav>
-        <a href="/">Home</a>
-        <a href="/login">Login</a>
+        <a href="/" class="brand">Good Food</a>
+        <div>
+            {{#if isLogedIn}}
+            <a href="/account">Account</a>
+            <a href="/" id="logout">Logout</a>
+            {{else}}
+            <a href="/menu">Menu</a>
+            <a href="/login">Login</a>
+            {{/if}}
+        </div>
     </nav>
 
     <main>
@@ -23,6 +32,10 @@
             All rights reserved 2023
         </p>
     </footer>
+
+    {{#if isLogedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>

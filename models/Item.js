@@ -18,6 +18,9 @@ Item.init({
     },
     price: {
         type: DataTypes.INTEGER
+    },
+    imageurl: {
+        type: DataTypes.STRING
     }
 },
 

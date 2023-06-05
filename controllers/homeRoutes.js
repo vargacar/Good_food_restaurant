@@ -1,7 +1,7 @@
 const router = require('express').Router();
+const { Item } = require('../models');
 
 router.get('/',(req, res)=>{
- res.render('homepage')
  res.render('homepage', { isLogedIn: req.session.isLogedIn})   
 })
 
@@ -13,5 +13,20 @@ router.get('/signup',(req, res)=>{
     res.render('signup')
 })
 
+router.get('/menu',(req, res)=>{
+    Item.findAll({
+        attributes: [
+            'id', 'category', 'name', 'price', 'imageurl'
+        ]
+    }).then((itemsData)=>{
+        const items = itemsData.map((item)=>{
+            return item.get({plain: true})
+        })
+        res.render('menu', {items})
+    })
+    .catch(()=>{
+        res.render('menu', {items: [], message: 'Error getting Menu Items, try again later.'})
+    })
+})
 
 module.exports = router;

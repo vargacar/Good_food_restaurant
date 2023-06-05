@@ -1,0 +1,12 @@
+{{#each orders}}
+    <div class="order">
+        <h2>Order #{{this.id}}</h2>
+        {{#each this.Items}}
+            <div class="item">
+                <p>Name: {{this.name}}</p>
+                <p>Category: {{this.category}}</p>
+                <p>Price: {{this.price}}</p>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}

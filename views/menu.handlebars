@@ -1,13 +1,25 @@
-<h1>Menu Page</h1>
 <div class="info">
     {{#if message}}
     <p>{{message}}</p>
     {{/if}}
 </div>
 
+<div class="filters">
+    <a href="/menu">All</a>
+    <a href="/menu?category=Breakfast">Breakfast</a>
+    <a href="/menu?category=Lunch">Lunch</a>
+    <a href="/menu?category=Dinner">Dinner</a>
+    <a href="/menu?category=Drinks">Drinks</a>
+    <a href="/menu?category=Desserts">Desserts</a>
+    <a href="/menu?category=Sides">Sides</a>
+
+</div>
 <div class="items_container">
     {{#each items}}
-    <img src="{{this.imageurl}}" alt="">
-    <p>{{this.name}}</p>
+    <div class="item_card">
+        <img src="{{this.imageurl}}" alt="">
+        <p><span>{{this.name}} </span> <span>${{this.price}}</span></p>
+        <button>Add to Order</button>
+    </div>
     {{/each}}
 </div>

@@ -10,27 +10,16 @@ Order.init({
         primaryKey: true,
         autoIncrement: true
     },
-    quantity: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        // The quantity must be at least 1
-        validate: {
-            min: 1
-        }
-    },
-    accountId: {
+    userId: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'account',
+            model: 'user',
             key: 'id',
         }
     },
-    itemId: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'item',
-            key: 'id',
-        }
+    
+    totalPrice: {
+        type: DataTypes.DECIMAL,
     }
 }, {
     sequelize,

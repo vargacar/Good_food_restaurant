@@ -20,7 +20,7 @@ Item.init({
         type: DataTypes.INTEGER
     },
     imageurl: {
-        type: DataTypes.STRING
+        type: DataTypes.TEXT
     }
 },
 

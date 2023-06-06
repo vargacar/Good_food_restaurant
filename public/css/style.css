@@ -163,3 +163,63 @@ input[type=submit]:hover {
     list-style: none;
     flex-grow: 2;
 }
+
+.info p{
+    background-color: #FF9494;
+    padding: 10px;
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    text-transform: uppercase; 
+}
+
+.filters a{
+    text-decoration: none;
+}
+
+.filters a:hover{
+    border: 1px solid #ccc;
+    color: #04AA6D;
+}
+
+.items_container {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* justify-content: space-around; */
+}
+
+.item_card{
+    width: 300px;
+    background-color: #f1f1f1;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.item_card img{
+    width: 250px;
+    height: 250px;
+}
+
+.item_card button{
+    background-color: #8ac926;
+    padding: 2px;
+    border: none;
+    width: 87%;
+}
+
+.item_card p{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 87%;
+}

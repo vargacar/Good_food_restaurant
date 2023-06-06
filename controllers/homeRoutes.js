@@ -14,7 +14,12 @@ router.get('/signup',(req, res)=>{
 })
 
 router.get('/menu',(req, res)=>{
+    const allCategories = ['Lunch', 'Breakfast', 'Dinner', 'Desserts', 'Drinks', 'Sides']
+    const category = req.query.category || allCategories
     Item.findAll({
+        where: {
+            category
+        },
         attributes: [
             'id', 'category', 'name', 'price', 'imageurl'
         ]

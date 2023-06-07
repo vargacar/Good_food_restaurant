@@ -6,79 +6,55 @@ const itemsData = [
     name: 'Italian Omelette',
     price: 14.25,
     category: 'Breakfast',
-
-    imageurl: 'https://www.istockphoto.com/photo/vegetable-and-chicken-eggs-frittata-of-shredded-zucchini-and-carrot-gm1242845108-362810696?utm_campaign=srp_photos_noresults&utm_content=https%3A%2F%2Fwww.pexels.com%2Fsearch%2FItalianomeleette%2F&utm_medium=affiliate&utm_source=pexels&utm_term=Italianomeleette'
-
-    
+    imageurl: '/img/italian_ome.jpg'
   },
   {
     name: 'Pastrami & Eggs',
     price: 15.35,
     category: 'Breakfast',
-
-    imageurl: 'https://www.istockphoto.com/photo/potato-hash-with-fried-eggs-and-meat-pastrami-for-breakfast-branch-gm1389088261-446505770?phrase=Pastrami+%26+Eggs'
-
-   
+    imageurl: '/img/pastrami_eggs.jpg'
   },
   {
     name: 'Silver Dollar Pancake',
     price: 9.85,
     category: 'Breakfast',
-
-    imageurl: 'https://www.istockphoto.com/photo/stack-of-freshly-made-pancakes-on-a-gingham-tablecloth-gm1165376899-320651763?phrase=Silver+Dollar+Pancake'
-
-    
+    imageurl: '/img/pancakes.jpg'
   },
   {
     name: 'French Toast',
     price: 8.75,
     category: 'Breakfast',
-
-    imageurl: 'https://placehold.co/250'
-
-    
+    imageurl: '/img/french_toast.jpg'
   },
   {
     name: 'Bananas Foster Waffle',
     price: 17.55,
     category: 'Breakfast',
-
-    imageurl: 'https://www.istockphoto.com/photo/waffles-with-berries-for-breakfast-gm914435152-251681689?phrase=Bananas+Foster+Waffle%27'
-
-    
+    imageurl: '/img/waffle.jpg'
   },
   {
     name: 'Potato & Egg Sandwich',
     price: 4.95,
     category: 'Breakfast',
-
-    imageurl: 'https://www.pexels.com/photo/delicious-sandwich-with-fried-potatoes-and-onions-and-eggs-served-on-plate-6940999/'
-
-    
+    imageurl: '/img/egg_sandich.jpg'
   },
   {
     name: 'Turkey Club',
     price: 16.45,
     category: 'Lunch',
-    imageurl: 'https://www.istockphoto.com/photo/foot-long-turkey-club-submarine-sandwich-gm171586893-22017221?phrase=Turkey+Club%27'
-
-
+    imageurl: '/img/Turkey-Sandwich.jpg'
   },
   {
     name: 'Tuna Melt',
     price: 15.35,
     category: 'Lunch',
-
-    imageurl: 'https://www.istockphoto.com/photo/homemade-toasted-tuna-melt-sandwich-gm1250718247-364876675?phrase=Tuna+Melt'
-
+    imageurl: '/img/tuna-melt.jpg'
   },
   {
     name: 'Chicken Fingers Delight',
     price: 15.95,
     category: 'Lunch',
-
-    imageurl: 'https://www.istockphoto.com/photo/tori-karaage-gm451887805-29718782?phrase=Chicken+Fingers+Delight'
-
+    imageurl: '/img/chix_fingers.jpg'
   },
   {
     name: 'Cuban Panini',

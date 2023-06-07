@@ -27,7 +27,7 @@ router.get('/menu',(req, res)=>{
         const items = itemsData.map((item)=>{
             return item.get({plain: true})
         })
-        res.render('menu', {items})
+        res.render('menu', {items, isLogedIn: req.session.isLogedIn})
     })
     .catch(()=>{
         res.render('menu', {items: [], message: 'Error getting Menu Items, try again later.'})

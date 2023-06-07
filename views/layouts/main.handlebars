@@ -13,13 +13,14 @@
     <nav>
         <a href="/" class="brand">Good Food</a>
         <div>
+            <a href="/menu">Menu</a>
             {{#if isLogedIn}}
             <a href="/account">Account</a>
             <a href="/" id="logout">Logout</a>
             {{else}}
-            <a href="/menu">Menu</a>
-            <a href="/login">Login</a>
+            <a href="/login" id="login">Login</a>
             {{/if}}
+            <button id="cart">Cart</button>
         </div>
     </nav>
 

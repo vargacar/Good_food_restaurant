@@ -18,7 +18,8 @@ OrderItem.init({
             min: 1
         }
     },
-    OrderId: {
+    
+    orderId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'order',

@@ -1,29 +1,28 @@
 const User = require('./User');
 const Item = require('./Item');
-const Review= require('./Review');
 const Order = require('./Order');
 const OrderItem = require('./OrderItems')
 
 User.hasMany(Order, {
-    foreignKey: 'userId'
+    foreignKey: 'user_id'
 })
 
 Order.belongsTo(User, {
-    foreignKey: 'userId',
+    foreignKey: 'user_id',
     onDelete : 'cascade'
 })
 
 Order.hasMany(OrderItem, {
-    foreignKey: 'orderId'
+    foreignKey: 'order_id'
 })
 
 OrderItem.belongsTo(Order, {
-    foreignKey: 'orderId',
+    foreignKey: 'order_id',
     onDelete : 'cascade'
 })
 
 OrderItem.hasMany(Item, {
-    foreignKey: 'itemId'
+    foreignKey: 'item_id'
 })
 
-module.exports = { User, Item, Review, Order, OrderItem };
+module.exports = { User, Item, Order, OrderItem };

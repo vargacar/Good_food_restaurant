@@ -19,7 +19,30 @@
     <div class="item_card">
         <img src="{{this.imageurl}}" alt="">
         <p><span>{{this.name}} </span> <span>${{this.price}}</span></p>
-        <button>Add to Order</button>
+        <button onclick="addToOrder(this,'{{this.name}}','{{this.price}}','{{this.imageurl}}','{{this.id}}')">Add to
+            Order</button>
     </div>
     {{/each}}
 </div>
+<div class="cart_items">
+    <div class="cart_items_container">
+        <div class="cart_item">
+            <img src="/img/waffle.jpg" alt="">
+            <p>Name</p>
+            <p>
+                <button onclick="addquantity(id)" class="add">+</button>
+                <span class="quantity">1</span>
+                <button class="reduce">-</button>
+            </p>
+            <p>$ 50</p>
+        </div>
+    </div>
+    <div>
+        <div class="cart_item">
+            <h3>Total</h3>
+            <h3 id="total_price">$50</h3>
+        </div>
+        <button class="confirm">Confirm Order</button>
+    </div>
+</div>
+<script src="/js/order.js"></script>

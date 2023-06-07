@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+
 router.post('/', (req, res)=>{
   
     const{username, email, password}= req.body
@@ -9,6 +10,7 @@ router.post('/', (req, res)=>{
         req.session.save(()=>{
             req.session.userId = savedUser.id 
             req.session.username = savedUser.username
+            req.session.email = savedUser.email 
             req.session.isLogedIn = true  
 
             res.status(200).json({message: "Account created"})
@@ -38,6 +40,7 @@ router.post('/login', (req, res) => {
         req.session.save(() => {
             req.session.userId = dbUser.id
             req.session.username = dbUser.username
+            req.session.email = dbUser.email 
             req.session.isLogedIn = true
 
             res.json({ message: "Login Success!" })

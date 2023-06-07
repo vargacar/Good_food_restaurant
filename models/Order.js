@@ -26,7 +26,7 @@ Order.init({
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'order'
+    modelName: 'orders'
 });
 
 module.exports = Order;

@@ -18,9 +18,13 @@
     "express-handlebars": "^7.0.7",
     "express-session": "^1.17.3",
     "mysql2": "^3.3.2",
-    "sequelize": "^6.31.1"
+    "sequelize": "^6.31.1",
+    "shrinkwrap": "^0.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

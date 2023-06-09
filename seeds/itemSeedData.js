@@ -96,7 +96,7 @@ const itemsData = [
     name: 'Baked Meatloaf',
     price: 19.75,
     category: 'Dinner',
-    imageurl: '/img/Baked_Meatloaf.jpg/'
+    imageurl: '/img/Baked_Meatloaf.jpg'
   },
   {
     name: 'Roast Sirloin of Beef',
@@ -114,13 +114,13 @@ const itemsData = [
     name: 'Cheescake',
     price: 5.70,
     category: 'Desserts',
-    imageurl: '/img/cheescake.jpg'
+    imageurl: '/img/cheesecake.jpg'
   },
   {
     name: 'Chocolate Cheescake',
     price: 6.35,
     category: 'Desserts',
-    imageurl: '/img/Chocolate_Cheesecake.jpg'
+    imageurl: '/img/Chocolate-Cheesecake.jpg'
   },
   {
     name: 'Apple Pie',
@@ -212,7 +212,7 @@ const itemsData = [
     name: 'Toast',
     price: 2.15,
     category: 'Sides',
-    imageurl: '/img/Toast.jpeg'
+    imageurl: '/img/Toast.jpg'
   },
   {
     name: 'Croissant',

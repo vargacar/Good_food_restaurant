@@ -16,11 +16,12 @@ router.get('/account', withAuth, (req, res) => {
             return item.get({ plain: true })
         })
         console.log(orders)
+        
         res.render('account', {
             isLogedIn: req.session.isLogedIn,
             email: req.session.email,
             username: req.session.username, 
-            orders
+            ...orders
         })
     })
         .catch((error) => {

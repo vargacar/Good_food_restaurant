@@ -8,16 +8,19 @@
         <h1>My Orders</h1>
         <div class="container"> 
             {{#each orders}}
+            {{@key}}
+            {{#each this}}
             <div class="item">
-                <h3>Order {{this.id}}</h3>
+                <h3>Order 14 {{this.id}}</h3>
+                <h3>Order 15 {{id}}</h3>
                 <ul class="menuitems">
-                   <li>Menu Item 1</li>
-                   <li>Lorem iel a provident hic cum incidunt, illo aperiam?</li> 
-                   <li>Menu Item 3</li>  
+                   <li>{{this}}</li>
+                   <li>{{this.price}}</li> 
+                   <li>{{this.category}}</li>  
                 </ul>
             </div>
             {{/each}}
-            
+            {{/each}}
         </div>
     </div>
 </div>

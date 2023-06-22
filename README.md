@@ -1,7 +1,5 @@
 # Good Food Restaurant
 
-# Module 12 Challenge: Employee Tracker
-
 ![Screenshot of application](https://cdn.discordapp.com/attachments/559810933866758161/1116140938591481896/image.png)
 
 ## Table of Contents

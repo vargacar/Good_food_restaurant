@@ -21,7 +21,7 @@ router.get('/account', withAuth, (req, res) => {
             isLogedIn: req.session.isLogedIn,
             email: req.session.email,
             username: req.session.username, 
-            ...orders
+            orders
         })
     })
         .catch((error) => {
